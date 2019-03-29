@@ -2,9 +2,11 @@
 > A docker image running speedtest every 10 minutes.
 
 
-Intended Use: Run in a raspberry pi connected via ethernet to your main router
+Intended Use: Run in a Raspberry Pi connected via ethernet to your main router.
 
-Log the connection speed to docker logs and run in in a raspberry pi or your main machine.
+> Note: When running on Raspberry Pi, just note that the maximum speed is limited by its 100 Mbit/s LAN adapter. The Raspberry Pi 3+ models comes with a Gigabit LAN adapter which [supports a maximum throughput of 300 Mbit/s](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/). 
+
+Log the connection speed to docker logs and run in in a Raspberry Pi or your main machine.
 
 ### Build docker image
 
@@ -58,3 +60,4 @@ Download: 18.87 Mbit/s
 Upload: 4.14 Mbit/s
 ```
 
+> While running, your network capacity is fully utilized. This may have a negative effect on other devices in use the network. 
