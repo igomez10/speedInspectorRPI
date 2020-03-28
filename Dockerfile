@@ -8,4 +8,4 @@ RUN apk update \
 RUN touch /var/log/cron.log
 ADD crontab.txt /crontab.txt
 RUN /usr/bin/crontab /crontab.txt
-CMD /usr/sbin/crond -f -L /var/log/cron.log 
+ENTRYPOINT ["sh" , "-c", "speedtest && /usr/sbin/crond -f -L /var/log/cron.log"]
