@@ -1,2 +1,2 @@
-*/10 * * * * speedtest-cli --simple 2>&1 | tee /var/log/cron.log
+*/1 * * * * speedtest-cli --simple 2>&1 | tee /var/log/cron.log
 

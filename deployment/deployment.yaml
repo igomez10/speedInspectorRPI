@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: speedtest-inspector-deployment
+  labels:
+    app: speedtest-inspector
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: speedtest-inspector
+  template:
+    metadata:
+      labels:
+        app: speedtest-inspector
+    spec:
+      containers:
+        - name: speddtest
+          image: igomeza/speedinspector:arm
+          resources:
+            limits:
+              cpu: 100m
+              memory: 400Mi
