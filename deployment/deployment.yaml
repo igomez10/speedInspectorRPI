@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: speddtest
-          image: igomeza/speedinspector:arm
+          image: igomeza/speedinspector
           resources:
             limits:
               cpu: 100m
